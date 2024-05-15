@@ -62,7 +62,8 @@ export default defineConfig({
     host: true,
     proxy: {
       '^/api': {
-        target: "http://127.0.0.1:8081/file/mobile",  //开启本地java 服务
+        // target: "http://127.0.0.1:8081/file/mobile",  //开启本地java 服务
+        target: "https://z3web.cn",
         changeOrigin: true,
         rewrite: (path) => {
           return path.replace("/api", "/api/react-ant-admin")
